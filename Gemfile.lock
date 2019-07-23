@@ -91,7 +91,7 @@ GEM
     json (2.2.0)
     kamiflex (0.8.0)
       json
-    kamigo (0.2.1)
+    kamigo (0.2.2)
       kamiflex (~> 0.8.0)
       kamiliff (~> 0.11.0)
       line-bot-api (~> 1.5)
@@ -149,7 +149,7 @@ GEM
       method_source
       rake (>= 0.8.7)
       thor (>= 0.19.0, < 2.0)
-    rake (12.3.2)
+    rake (12.3.3)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
@@ -213,7 +213,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   dotenv-rails (~> 2.7)
   jbuilder (~> 2.5)
-  kamigo (~> 0.2.1)
+  kamigo (~> 0.2.2)
   listen (>= 3.0.5, < 3.2)
   pg
   puma (~> 3.11)
