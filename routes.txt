@@ -1,0 +1,20 @@
+                   Prefix Verb   URI Pattern                                                                              Controller#Action
+                     root GET    /                                                                                        home#index
+                    index GET    /index(.:format)                                                                         home#index
+                     menu GET    /menu(.:format)                                                                          home#menu
+                    todos GET    /todos(.:format)                                                                         todos#index
+                          POST   /todos(.:format)                                                                         todos#create
+                 new_todo GET    /todos/new(.:format)                                                                     todos#new
+                edit_todo GET    /todos/:id/edit(.:format)                                                                todos#edit
+                     todo GET    /todos/:id(.:format)                                                                     todos#show
+                          PATCH  /todos/:id(.:format)                                                                     todos#update
+                          PUT    /todos/:id(.:format)                                                                     todos#update
+                          DELETE /todos/:id(.:format)                                                                     todos#destroy
+               liff_entry GET    /liff_entry(.:format)                                                                    liff#entry
+               liff_route POST   /liff_route(.:format)                                                                    liff#route
+                     line POST   /line(.:format)                                                                          line#entry
+       rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+       rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+     rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create
