@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'home#index'
+  root to: 'home#menu'
   get "index", to: 'home#index'
   get "menu", to: 'home#menu'
   get "目錄", to: 'home#menu'
