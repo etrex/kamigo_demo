@@ -7,6 +7,11 @@ Kamiflex.build(self) do
         message_button "目錄頁", "/menu", style: "primary", margin: "md"
         message_button "Todo", "/todos", style: "primary", margin: "md"
       end
+      horizontal_box margin: "md" do
+        url_button "網站首頁", "https://kamigo-demo.herokuapp.com", style: "primary", margin: "md"
+        url_button "聊天機器人", "https://line.me/R/ti/p/%40wnf1580w", style: "primary", margin: "md"
+        filler
+      end
     end
   end
 end
