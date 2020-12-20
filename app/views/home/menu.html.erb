@@ -3,3 +3,15 @@
 <a href="/todos">Todo</a> <br/>
 <a href="https://kamigo-demo.herokuapp.com">網站首頁</a> <br/>
 <a href="https://line.me/R/ti/p/%40wnf1580w">聊天機器人</a> <br/>
+<a href="https://line.me/R/nv/QRCodeReader">QRCode Scanner</a> <br/>
+
+一個含有 LIFF 網址的 qrcode：<br/>
+
+<%=
+  RQRCode::QRCode.new(liff_path(path: '/menu')).as_svg(
+    offset: 0,
+    color: '000',
+    shape_rendering: 'crispEdges',
+    module_size: 6
+  ).html_safe
+%>
