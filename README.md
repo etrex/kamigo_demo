@@ -1,24 +1,16 @@
-# README
+# 部署流程
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+點擊以下按鈕一鍵部署至 heroku：
 
-Things you may want to cover:
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-* Ruby version
+設定以下環境變數：
 
-* System dependencies
+```
+LINE_CHANNEL_SECRET=
+LINE_CHANNEL_TOKEN=
+LIFF_COMPACT=
+LIFF_TALL=
+LIFF_FULL=
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

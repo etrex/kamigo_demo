@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
   root to: 'home#menu'
+
+  resources :todos
+
   get "index", to: 'home#index'
   get "menu", to: 'home#menu'
   get "目錄", to: 'home#menu'
-  resources :todos
 
   get '*location天氣', to: 'weather#show'
   get '(*location)天氣(*other)', to: 'weather#show'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get 'test', to: 'home#test'
+  get 'profile', to: 'home#profile'
 end
