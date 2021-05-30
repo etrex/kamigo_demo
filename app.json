@@ -10,6 +10,15 @@
     },
     "LINE_CHANNEL_TOKEN": {
       "description": "請到 LINE Developer 後台取得 LINE Messaging API 的 Channel Access Token："
+    },
+    "LIFF_COMPACT": {
+      "description": "請到 LINE Developer 後台取得 LINE Login API 當中的 LIFF Size 為 Compact 的 LIFF URL："
+    },
+    "LIFF_TALL": {
+      "description": "請到 LINE Developer 後台取得 LINE Login API 當中的 LIFF Size 為 Tall 的 LIFF URL："
+    },
+    "LIFF_FULL": {
+      "description": "請到 LINE Developer 後台取得 LINE Login API 當中的 LIFF Size 為 Full 的 LIFF URL："
     }
   }
 }
