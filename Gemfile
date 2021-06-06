@@ -66,3 +66,7 @@ gem "kamigo", "0.22.0"
 gem "dotenv-rails", "~> 2.7"
 
 gem "rqrcode"
+
+gem "devise", "~> 4.8"
+
+gem 'omniauth-line', git: 'git@github.com:etrex/omniauth-line.git'

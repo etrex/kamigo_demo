@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   root to: "home#index"
 
+  devise_for :users, controllers: {
+    omniauth_callbacks: 'omniauth_callbacks'
+  }
+
   get "follow", to: "home#follow"
   get "follow", to: "home#follow"
   get "join", to: "home#join"
