@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.3'
+gem 'rails', '~> 5.2.6'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
@@ -61,7 +61,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem "kamigo", "0.22.0"
+gem "kamigo", "0.25.0"
 
 gem "dotenv-rails", "~> 2.7"
 
@@ -69,4 +69,4 @@ gem "rqrcode"
 
 gem "devise", "~> 4.8"
 
-gem 'omniauth-line', git: 'git@github.com:etrex/omniauth-line.git'
+gem 'omniauth-line', git: 'https://github.com/etrex/omniauth-line.git'

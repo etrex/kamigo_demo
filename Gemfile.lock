@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:etrex/omniauth-line.git
+  remote: https://github.com/etrex/omniauth-line.git
   revision: fd880c99340bb3f7dde90a6f7ff26565b9c12982
   specs:
     omniauth-line (0.0.3)
@@ -95,19 +95,23 @@ GEM
       railties (>= 3.2)
     erubi (1.10.0)
     execjs (2.8.1)
-    faraday (1.4.2)
+    faraday (1.5.1)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
       faraday-excon (~> 1.1)
+      faraday-httpclient (~> 1.0.1)
       faraday-net_http (~> 1.0)
       faraday-net_http_persistent (~> 1.1)
+      faraday-patron (~> 1.0)
       multipart-post (>= 1.2, < 3)
       ruby2_keywords (>= 0.0.4)
     faraday-em_http (1.0.0)
     faraday-em_synchrony (1.0.0)
     faraday-excon (1.1.0)
+    faraday-httpclient (1.0.1)
     faraday-net_http (1.0.1)
-    faraday-net_http_persistent (1.1.0)
+    faraday-net_http_persistent (1.2.0)
+    faraday-patron (1.0.0)
     ffi (1.15.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -119,14 +123,14 @@ GEM
       activesupport (>= 5.0.0)
     json (1.8.6)
     jwt (2.2.3)
-    kamiflex (0.13.0)
+    kamiflex (0.17.0)
       json
-    kamigo (0.22.0)
-      kamiflex (~> 0.11, >= 0.11.0)
-      kamiliff (~> 0.25, >= 0.25.0)
+    kamigo (0.25.0)
+      kamiflex (~> 0.17, >= 0.17.0)
+      kamiliff (~> 0.29, >= 0.29.0)
       line-bot-api (~> 1.5)
       rails (>= 5.0.0)
-    kamiliff (0.26.0)
+    kamiliff (0.29.0)
       rails (>= 5.0.0)
     line-bot-api (1.19.0)
     listen (3.1.5)
@@ -271,12 +275,12 @@ DEPENDENCIES
   devise (~> 4.8)
   dotenv-rails (~> 2.7)
   jbuilder (~> 2.5)
-  kamigo (= 0.22.0)
+  kamigo (= 0.25.0)
   listen (>= 3.0.5, < 3.2)
   omniauth-line!
   pg
   puma (~> 4.3)
-  rails (~> 5.2.3)
+  rails (~> 5.2.6)
   rqrcode
   sass-rails (~> 5.0)
   selenium-webdriver

@@ -1,57 +1,68 @@
-<h1>網站建立成功</h1>
-<% if [
-  ENV["LINE_CHANNEL_SECRET"],
-  ENV["LINE_CHANNEL_SECRET"],
-  ENV["LIFF_COMPACT"],
-  ENV["LIFF_TALL"],
-  ENV["LIFF_FULL"]
-].any? nil %>
-  <h2>環境變數設定</h2>
-  <hr/>
-  <% if ENV["LINE_CHANNEL_SECRET"].nil? %>
-    <div>
-      <h3>尚未設定環境變數 LINE_CHANNEL_SECRET</h3>
-      請將 Channel secret 設定到環境變數 LINE_CHANNEL_SECRET，你可以在 LINE Messaging API Channel 下的 Basic settings 找到 Channel secret。
-    </div>
-  <% end %>
+<div class="container">
+  <br/>
+  <h3>網站建立成功</h3>
+  <hr/><br/>
 
-  <% if ENV["LINE_CHANNEL_TOKEN"].nil? %>
-    <div>
-      <h3>尚未設定環境變數 LINE_CHANNEL_TOKEN</h3>
-      請將 Channel access token 設定到環境變數 LINE_CHANNEL_TOKEN，你可以在 LINE Messaging API Channel 下的 Messaging API 找到 Channel access token。
-    </div>
-  <% end %>
+  <h6>LINE 串接資訊</h6>
+  <table class="table table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">名稱</th>
+        <th scope="col">網址</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td scope="row">LINE Messaging API Webhook URL</td>
+        <td><%= request.base_url %>/line</td>
+      </tr>
+      <tr>
+        <td scope="row">LINE Login API LIFF Endpoint URL</td>
+        <td><%= request.base_url %>/liff_entry</td>
+      </tr>
+      <tr>
+        <td scope="row">LINE Login API Callback URL</td>
+        <td><%= user_line_omniauth_callback_url %></td>
+      </tr>
+    </tbody>
+  </table>
+  <hr/><br/>
 
-  <% if ENV["LIFF_COMPACT"].nil? %>
-    <div>
-      <h3>尚未設定環境變數 LIFF_COMPACT</h3>
-      請將 Size 為 Compact 的 LIFF URL 設定到環境變數 LIFF_COMPACT，你可以在 LINE Login API Channel 下的 LIFF 找到 LIFF URL。
-    </div>
+  <% if env_setup_info.present? %>
+    <h6>環境變數設定</h6>
+    <table class="table table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">待設定的環境變數</th>
+          <th scope="col">說明</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% env_setup_info.each do |info| %>
+        <tr>
+          <td scope="row"><%= info[:env_name] %></td>
+          <td><%= "你可以在 #{info[:channel_name]} 的 #{info[:channel_tab]} 找到 #{info[:field_name]}" %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <hr/><br/>
+  <% else %>
+    <h6>圖文選單設定</h6>
+    <table class="table table-hover">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">名稱</th>
+          <th scope="col">網址</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row">分享機器人</td>
+          <td><%= liff_path(path: "/share_bot", liff_size: :compact) %></td>
+        </tr>
+      </tbody>
+    </table>
+    <hr/><br/>
   <% end %>
-
-  <% if ENV["LIFF_TALL"].nil? %>
-    <div>
-      <h3>尚未設定環境變數 LIFF_TALL</h3>
-      請將 Size 為 Tall 的 LIFF URL 設定到環境變數 LIFF_TALL，你可以在 LINE Login API Channel 下的 LIFF 找到 LIFF URL。
-    </div>
-  <% end %>
-
-  <% if ENV["LIFF_FULL"].nil? %>
-    <div>
-      <h3>尚未設定環境變數 LIFF_FULL</h3>
-      請將 Size 為 Full 的 LIFF URL 設定到環境變數 LIFF_FULL，你可以在 LINE Login API Channel 下的 LIFF 找到 LIFF URL。
-    </div>
-  <% end %>
-<% else %>
-  <h2>LINE 串接資訊</h2>
-  <hr/>
-
-  <div>
-    <h3>LINE Messaging API Webhook URL:</h3>
-    <%= "#{request.base_url}/line" %>
-  </div>
-  <div>
-    <h3>LINE Login API LIFF Endpoint URL:</h3>
-    <%= "#{request.base_url}/liff_entry" %>
-  </div>
-<% end %>
+</div>
