@@ -8,7 +8,7 @@
 一個含有 LIFF 網址的 qrcode：<br/>
 
 <%=
-  RQRCode::QRCode.new(liff_path(path: '/menu')).as_svg(
+  RQRCode::QRCode.new(safe_liff_path(path: '/menu')).as_svg(
     offset: 0,
     color: '000',
     shape_rendering: 'crispEdges',

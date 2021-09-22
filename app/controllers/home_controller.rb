@@ -5,6 +5,9 @@ class HomeController < ApplicationController
   def share_bot
   end
 
+  def share_bot_flex
+  end
+
   def member_join
     @profiles = params.dig(:payload, :joined, :members).map{|member| get_profile(member.dig(:userId)) }
   end

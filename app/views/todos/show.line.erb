@@ -4,7 +4,7 @@
       horizontal_box do
         text "🍔", flex: 0, action: message_action("/")
         text "Show Todo", weight: "bold", margin: "sm"
-        text "edit", align: "end", action: uri_action(liff_path(path: edit_todo_path(@todo) )), color: "#0000ee"
+        text "edit", align: "end", action: uri_action(safe_liff_path(path: edit_todo_path(@todo) )), color: "#0000ee"
       end
       separator
 

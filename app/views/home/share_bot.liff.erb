@@ -1,1 +1,2 @@
-<%= render "liff/share_target_picker", messages: [kamiflex_share_bot].to_json %>
+<% flex_message = flex_messages[params[:message_name].to_sym] || kamiflex_share_bot %>
+<%= render "liff/share_target_picker", messages: [flex_message].to_json %>

@@ -14,8 +14,10 @@ Kamiflex.json(self) do
 
       horizontal_box margin: :lg do
         url_button "聯絡作者", "https://www.facebook.com/the.kamiger", style: :primary
-        url_button "分享給好友", liff_path(path: "/share_bot", liff_size: :compact), style: :primary, margin: :md
+        url_button "分享給好友", safe_liff_path(path: "/share_bot?message_name=kamiflex_share_bot", liff_size: :compact), style: :primary, margin: :md
       end
+
+      url_button "分享給好友2", safe_liff_path(path: "/share_bot?message_name=kamiflex_share_bot2", liff_size: :compact), style: :primary, margin: :md
 
       horizontal_box margin: :lg do
         message_button "Flex 展示", "flex", style: :primary

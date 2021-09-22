@@ -57,4 +57,5 @@ Rails.application.routes.draw do
 
   # LIFF 分享好友
   get "share_bot", to: "home#share_bot"
+  get "share_bot_flex", to: "home#share_bot_flex"
 end
