@@ -25,7 +25,6 @@ Rails.application.routes.draw do
   get "目錄", to: "home#menu"
 
   # 查天氣
-  get "*location天氣", to: "weather#show"
   get "(*location)天氣(*other)", to: "weather#show"
 
   # 學說話
