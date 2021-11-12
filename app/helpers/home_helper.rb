@@ -95,20 +95,6 @@ module HomeHelper
     end
   end
 
-  def kamiflex_share_bot2
-    Kamiflex.hash(self) do
-      alt_text "Kamigo Demo 向您傳送了聯絡資訊2"
-      bubble do
-        body do
-          horizontal_box do
-            text "Kamigo Demo2", wrap: true, weight: :bold
-            url_button "分享此訊息", safe_liff_path(path: "/share_bot?message_name=kamiflex_share_bot2", liff_size: :compact), style: :primary, margin: :md
-          end
-        end
-      end
-    end
-  end
-
   def safe_liff_path(*args, **option)
     return liff_path(*args, **option) if ENV["LIFF_COMPACT"].present? && ENV["LIFF_TALL"].present? && ENV["LIFF_FULL"].present?
     root_url

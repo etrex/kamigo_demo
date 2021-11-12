@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # 首頁
   root to: "home#index"
+  get "index", to: "home#index"
 
   # LINE Login 登入
   devise_for :users, controllers: {
@@ -20,7 +21,6 @@ Rails.application.routes.draw do
   resources :todos
 
   # menu
-  get "index", to: "home#index"
   get "menu", to: "home#menu"
   get "目錄", to: "home#menu"
 
@@ -28,8 +28,12 @@ Rails.application.routes.draw do
   get "*location天氣", to: "weather#show"
   get "(*location)天氣(*other)", to: "weather#show"
 
+  # 學說話
+  get "學 (*keyword) (*message)", to: 'home#learn'
+
   # 測試用
   get "test", to: "home#test"
+  get "debug", to: "home#debug"
 
   # 查詢當下的使用者
   get "profile", to: "home#profile"
@@ -56,6 +60,7 @@ Rails.application.routes.draw do
   get "flex/showcases/ticket", to: "flex_showcases#ticket"
 
   # LIFF 分享好友
+  get "send_test_messages", to: "home#send_test_messages"
   get "share_bot", to: "home#share_bot"
   get "share_bot_flex", to: "home#share_bot_flex"
 end

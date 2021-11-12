@@ -1,15 +1,23 @@
 class HomeController < ApplicationController
   include Kamigo::Clients::LineClient
 
-  # before_action :authenticate_user
   def share_bot
   end
 
   def share_bot_flex
   end
 
+  def send_test_messages
+  end
+
   def member_join
     @profiles = params.dig(:payload, :joined, :members).map{|member| get_profile(member.dig(:userId)) }
+  end
+
+  def profile
+  end
+
+  def test
   end
 
   private

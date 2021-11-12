@@ -7,26 +7,24 @@ Kamiflex.json(self) do
 
       separator color: "#eeeeee"
 
-      horizontal_box margin: :lg do
+      horizontal_box margin: :lg, spacing: :md do
         message_button "功能目錄", "目錄", style: :primary
-        url_button "查看原始碼", "https://github.com/etrex/kamigo_demo", style: :primary, margin: :md
+        url_button "查看原始碼", "https://github.com/etrex/kamigo_demo", style: :primary
       end
 
-      horizontal_box margin: :lg do
+      horizontal_box margin: :lg, spacing: :md do
         url_button "聯絡作者", "https://www.facebook.com/the.kamiger", style: :primary
-        url_button "分享給好友", safe_liff_path(path: "/share_bot?message_name=kamiflex_share_bot", liff_size: :compact), style: :primary, margin: :md
+        url_button "分享給好友", safe_liff_path(path: "/share_bot", liff_size: :compact), style: :primary
       end
 
-      url_button "分享給好友2", safe_liff_path(path: "/share_bot?message_name=kamiflex_share_bot2", liff_size: :compact), style: :primary, margin: :md
-
-      horizontal_box margin: :lg do
+      horizontal_box margin: :lg, spacing: :md do
         message_button "Flex 展示", "flex", style: :primary
-        message_button "我的個人檔案", "profile", style: :primary, margin: :md
+        message_button "我的個人檔案", "profile", style: :primary
       end
 
-      horizontal_box margin: :lg do
+      horizontal_box margin: :lg, spacing: :md do
+        url_button "LIFF 傳訊息", safe_liff_path(path: "/send_test_messages", liff_size: :compact), style: :primary
         message_button "CRUD 展示", "todos", style: :primary
-        filler
       end
     end
   end

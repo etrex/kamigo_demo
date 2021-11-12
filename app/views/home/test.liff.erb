@@ -1,0 +1,7 @@
+platform_type: <%= params.dig(:platform_type) %><br/>
+source_type: <%= params.dig(:source_type) %><br/>
+source_group_id: <%= params.dig(:source_group_id) %><br/>
+source_user_id: <%= params.dig(:source_user_id) %><br/>
+user_name: <%= params.dig(:profile, :displayName) %><br/>
+user_image: <%= params.dig(:profile, :pictureUrl) %><br/>
+statusMessage: <%= params.dig(:profile, :statusMessage) %><br/>
