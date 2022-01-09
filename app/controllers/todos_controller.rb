@@ -88,6 +88,9 @@ class TodosController < ApplicationController
       puts "source_type: #{params[:source_type]}"
       puts "source_group_id: #{params[:source_group_id]}"
       puts "source_user_id: #{params[:source_user_id]}"
+      puts "context: #{params[:context]}"
+      puts "profile: #{params[:profile]}"
+      puts "decoded_id_token: #{params[:decoded_id_token]}"
       puts "=== kamigo debug info end ==="
       puts ""
     end

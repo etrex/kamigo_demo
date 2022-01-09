@@ -61,7 +61,9 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem "kamigo", "0.25.0"
+gem "kamigo", "0.26.0"
+# gem "kamigo",  path: "../kamigo"
+# gem "kamiliff", path: "../kamiliff"
 
 gem "dotenv-rails", "~> 2.7"
 

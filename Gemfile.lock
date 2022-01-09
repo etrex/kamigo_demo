@@ -125,14 +125,17 @@ GEM
     jwt (2.2.3)
     kamiflex (0.17.0)
       json
-    kamigo (0.25.0)
+    kamigo (0.26.0)
       kamiflex (~> 0.17, >= 0.17.0)
-      kamiliff (~> 0.29, >= 0.29.0)
+      kamiliff (~> 0.33, >= 0.33.0)
       line-bot-api (~> 1.5)
       rails (>= 5.0.0)
-    kamiliff (0.32.0)
+    kamiliff (0.33.0)
+      line_login (>= 0.1.0)
       rails (>= 5.0.0)
-    line-bot-api (1.19.0)
+    line-bot-api (1.22.0)
+    line_login (0.1.0)
+      json
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -275,7 +278,7 @@ DEPENDENCIES
   devise (~> 4.8)
   dotenv-rails (~> 2.7)
   jbuilder (~> 2.5)
-  kamigo (= 0.25.0)
+  kamigo (= 0.26.0)
   listen (>= 3.0.5, < 3.2)
   omniauth-line!
   pg
