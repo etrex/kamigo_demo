@@ -20,6 +20,9 @@ class HomeController < ApplicationController
   def test
   end
 
+  def menu
+  end
+
   private
 
   def get_profile(user_id)
